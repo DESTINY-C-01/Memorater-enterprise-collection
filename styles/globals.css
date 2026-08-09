@@ -9,10 +9,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  @apply bg-brand-white text-brand-black antialiased;
+  @apply bg-brand-white text-brand-black antialiased overflow-x-hidden;
 }
 
 ::selection {

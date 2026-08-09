@@ -38,48 +38,53 @@ export default async function DashboardOverviewPage() {
 
   return (
     <div>
-      <h1 className="font-display text-2xl mb-8">Overview</h1>
+      <h1 className="font-display text-3xl lg:text-4xl mb-10">Overview</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-6 mb-12">
         {cards.map((card) => (
-          <div key={card.label} className="border border-black/10 rounded-xl2 p-6">
-            <p className="text-xs text-brand-black/50 mb-2">{card.label}</p>
-            <p className="font-display text-3xl">{card.value}</p>
+          <div
+            key={card.label}
+            className="border border-black/10 rounded-xl2 p-7 lg:p-8 hover:border-brand-gold/40 transition-colors"
+          >
+            <p className="text-sm text-brand-black/50 mb-3">{card.label}</p>
+            <p className="font-display text-4xl lg:text-5xl">{card.value}</p>
           </div>
         ))}
       </div>
 
-      <h2 className="font-medium mb-4">Recent Orders</h2>
+      <h2 className="font-medium text-lg mb-5">Recent Orders</h2>
       <div className="border border-black/10 rounded-xl2 overflow-hidden">
-        <table className="w-full text-sm">
-          <thead className="bg-black/5 text-left text-xs text-brand-black/50">
-            <tr>
-              <th className="px-4 py-3">Order #</th>
-              <th className="px-4 py-3">Customer</th>
-              <th className="px-4 py-3">Total</th>
-              <th className="px-4 py-3">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {stats.recentOrders.map((order) => (
-              <tr key={order.id} className="border-t border-black/5">
-                <td className="px-4 py-3 font-medium">{order.order_number}</td>
-                <td className="px-4 py-3">{order.customer_name}</td>
-                <td className="px-4 py-3">
-                  {order.currency} {order.total_amount}
-                </td>
-                <td className="px-4 py-3 capitalize">{order.status}</td>
-              </tr>
-            ))}
-            {stats.recentOrders.length === 0 && (
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm lg:text-base">
+            <thead className="bg-black/5 text-left text-xs lg:text-sm text-brand-black/50">
               <tr>
-                <td colSpan={4} className="px-4 py-8 text-center text-brand-black/40">
-                  No orders yet
-                </td>
+                <th className="px-5 py-4">Order #</th>
+                <th className="px-5 py-4">Customer</th>
+                <th className="px-5 py-4">Total</th>
+                <th className="px-5 py-4">Status</th>
               </tr>
-            )}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {stats.recentOrders.map((order) => (
+                <tr key={order.id} className="border-t border-black/5">
+                  <td className="px-5 py-4 font-medium whitespace-nowrap">{order.order_number}</td>
+                  <td className="px-5 py-4 whitespace-nowrap">{order.customer_name}</td>
+                  <td className="px-5 py-4 whitespace-nowrap">
+                    {order.currency} {order.total_amount}
+                  </td>
+                  <td className="px-5 py-4 capitalize whitespace-nowrap">{order.status}</td>
+                </tr>
+              ))}
+              {stats.recentOrders.length === 0 && (
+                <tr>
+                  <td colSpan={4} className="px-5 py-10 text-center text-brand-black/40">
+                    No orders yet
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
