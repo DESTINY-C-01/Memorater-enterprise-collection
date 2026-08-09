@@ -17,13 +17,13 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://memorater.com'),
   title: {
-    default: 'Memorater Enterprise Collection | Premium Women\'s Fashion',
-    template: '%s | Memorater Enterprise Collection',
+    default: 'Memorater Interprise Collection | Premium Women\'s Fashion',
+    template: '%s | Memorater Interprise Collection',
   },
   description:
     'Shop premium women\'s shoes, heels, sneakers, sandals, bags and accessories. Browse, select, and order directly via WhatsApp.',
   openGraph: {
-    title: 'Memorater Enterprise Collection',
+    title: 'Memorater Interprise Collection',
     description: 'Premium women\'s fashion, ordered directly via WhatsApp.',
     type: 'website',
   },

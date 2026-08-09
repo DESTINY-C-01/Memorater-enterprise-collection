@@ -34,7 +34,7 @@ export function Header() {
           <Link href="/" className="font-display text-xl sm:text-2xl tracking-wide text-gradient-gold">
             Memorater
             <span className="block text-[0.55rem] tracking-[0.35em] text-brand-black/70 font-body">
-              ENTERPRISE COLLECTION
+              INTERPRISE COLLECTION
             </span>
           </Link>
 

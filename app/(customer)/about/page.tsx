@@ -56,7 +56,7 @@ export default function AboutPage() {
       {/* Follow the brand */}
       <div className="mt-6 text-center">
         <p className="text-xs uppercase tracking-wider text-brand-black/50 mb-3">
-          Follow Memorater Enterprise Collection
+          Follow Memorater Interprise Collection
         </p>
         <div className="flex items-center justify-center gap-5">
           <a

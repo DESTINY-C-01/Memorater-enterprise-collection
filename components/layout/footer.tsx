@@ -55,7 +55,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-6 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} Memorater Enterprise Collection. All rights reserved.
+        © {new Date().getFullYear()} Memorater Interprise Collection. All rights reserved.
       </div>
     </footer>
   );
