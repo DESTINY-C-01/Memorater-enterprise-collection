@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-white text-brand-black antialiased;
+}
+
+::selection {
+  @apply bg-brand-gold/30;
+}
+
+.glass {
+  @apply bg-white/60 backdrop-blur-md border border-white/40;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, #c9a24b, #e6cd8b, #c9a24b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
